@@ -1,7 +1,7 @@
 # news-classification-ai
 自动将以一段话为单位，换行符为分割的多段话自动分类并存放到对应类别txt文件的ai助手。An AI assistant that automatically classifies multi-paragraph texts—segmented by line breaks into individual paragraphs—and saves them into corresponding category-specific TXT files.
 
-```markdown
+
 # 新闻处理代理 (news_process_agent)
 
 一个基于 AI 的新闻自动分类与整理系统。用户粘贴多条 AI 相关新闻，AI 自动为每条新闻分配一个分类，系统按分类排序后，将新闻追加保存到对应的 Markdown 文件中。
@@ -35,7 +35,7 @@
 
 ## 系统架构与数据流程
 
-```
+
 用户输入新闻内容
     ↓
 SearchPage.vue（文本预处理：合并换行、去尾空格）
@@ -152,7 +152,7 @@ AI 服务为外部依赖，需自行部署并保证在 `localhost:8081` 提供�
 ## 分类体系
 
 系统使用 17 个分类类目，每个分类对应一个 Markdown 文件：
-```markdown
+
 | 编号 | 分类名称 |
 | --- | --- |
 | 1 | 语音·音频识别与合成-非商业项目 |
@@ -172,7 +172,7 @@ AI 服务为外部依赖，需自行部署并保证在 `localhost:8081` 提供�
 | 15 | 评测基准与比赛 |
 | 16 | AI软件创业项目-商业项目 |
 | 17 | 其他 |
-```
+
 
 ## 文件保存位置
 
@@ -197,7 +197,7 @@ AI 服务为外部依赖，需自行部署并保证在 `localhost:8081` 提供�
 6. 点击"返回"回到输入页面
 
 ### 主要改动总结
-```
+
 | 问题 | 修复 |
 |------|------|
 | 代码块没有语言标识 | 添加了 `bash`、`python`、`json` |
@@ -206,4 +206,4 @@ AI 服务为外部依赖，需自行部署并保证在 `localhost:8081` 提供�
 | 流程图用了缩进文本 | 用 ` ``` ` 代码块包裹 |
 | 尾部有 `---` | 直接删掉（README 不需要） |
 | 列表项有缩进不一致 | 统一成 2 空格缩进 |
-```
+

@@ -20,7 +20,7 @@
 | --- | --- |
 | 前端 | Vue 3 + TypeScript + Vite + Vue Router + Axios |
 | 后端 | FastAPI (Python) |
-| AI 服务 | SpringAI（外部服务，不在本仓库内） |
+| AI 服务 | SpringAI or Langchain（外部服务，不在本仓库内） |
 | 数据存储 | 本地 Markdown 文件（Obsidian Vault） |
 
 ## 服务与端口
@@ -28,10 +28,10 @@
 | 服务 | 端口 | 说明 |
 | --- | --- | --- |
 | Vite 开发服务器 | 5173 | 前端 |
-| SpringAI 服务 | 8081 | AI 聊天接口（需自行部署，不在本仓库） |
+| SpringAI or Langchain 服务 | 8081 | AI 聊天接口（需自行部署，不在本仓库） |
 | FastAPI 服务 | 8083 | 后端保存接口 |
 
-> **注意**：完整流程需要 SpringAI 服务运行在 `localhost:8081`，否则 AI 分类步骤会失败。
+> **注意**：完整流程需要 LLM api 服务运行在 `localhost:8081`，否则 AI 分类步骤会失败。
 
 ## 系统架构与数据流程
 
@@ -43,7 +43,7 @@ SearchPage.vue（文本预处理：合并换行、去尾空格）
 TextBoxPage.vue
     ↓ handleStart() 按换行分割 → newsList[]
     ↓ processNewsWithAI() 并发请求 AI（GET /ai/chat）
-    ↓ SpringAI 返回分类编号 → analysisList[]
+    ↓ SpringAI or Langchain 返回分类编号 → analysisList[]
     ↓ transformToNewsBars() 可视化展示
     ↓ sort() 排序 → finallist[[分类编号, 新闻内容]]
     ↓ append() → saveNews()
@@ -60,7 +60,7 @@ TextBoxPage.vue
 │   └── README.md               # 后端说明（部分内容已过时，见"注意事项"）
 ├── src/
 │   ├── api/
-│   │   ├── api.js              # API 调用封装（SpringAI + FastAPI）
+│   │   ├── api.js              # API 调用封装（LLM API + FastAPI）
 │   │   └── api.d.ts            # 类型声明
 │   ├── utils/
 │   │   ├── prompts.js          # AI 提示词配置（17 个分类类目）

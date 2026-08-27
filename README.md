@@ -109,7 +109,7 @@ python main.py
 uvicorn main:app --host 0.0.0.0 --port 8083 --reload
 ```
 
-### SpringAI 服务
+### LLM API 服务
 
 AI 服务为外部依赖，需自行部署并保证在 `localhost:8081` 提供服务，接口为 `GET /ai/chat?prompt=xxx&chatId=xxx`。
 

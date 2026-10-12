@@ -14,6 +14,25 @@
 - **自动排序**：按分类编号对新闻进行重排，相同分类的新闻自动聚拢
 - **自动归档**：按分类将新闻追加写入对应的 Markdown 文件（Obsidian 笔记库），不会覆盖已有内容
 
+## 运行截图
+### 1.初始界面
+<img width="1280" height="707" alt="10" src="https://github.com/user-attachments/assets/b5f55f74-5237-4a99-9043-14a073b8e613" />
+
+### 2.输入内容
+<img width="1280" height="672" alt="11" src="https://github.com/user-attachments/assets/00a87ea1-d2c5-4bfd-b636-b37fa38e2043" />
+
+### 3.点击'发送'按钮
+<img width="1280" height="670" alt="12" src="https://github.com/user-attachments/assets/e23ca612-2d95-4cf7-884b-edaebd48ca76" />
+
+### 4.点击'开始'按钮，自动对内容进行分类整理
+<img width="1280" height="673" alt="13" src="https://github.com/user-attachments/assets/e781a0dd-5b8a-48d7-84fc-143c749d60ad" />
+
+### 5.点击'重排'按钮，自动对内容进行排序
+<img width="1280" height="669" alt="14" src="https://github.com/user-attachments/assets/4a1e5aa3-5a60-4416-8e0c-7cf79de7ec8a" />
+
+### 6.点击'追加'按钮，一键写入本地文件
+<img width="1280" height="674" alt="15" src="https://github.com/user-attachments/assets/a41b7750-6437-4bbd-96b9-ee69aa79ea2b" />
+
 ## 技术栈
 
 | 模块 | 技术 |
